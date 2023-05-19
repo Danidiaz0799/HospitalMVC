@@ -1,0 +1,33 @@
+﻿@model List<HospitalMVC.Models.User>
+
+<div class="container">
+    <h1>Users</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Management</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => user.FirstName)</td>
+                    <td>@Html.DisplayFor(m => user.LastName)</td>
+                    <td>@Html.DisplayFor(m => user.Username)</td>
+                    <td>@Html.DisplayFor(m => user.Email)</td>
+                    <td>@Html.DisplayFor(m => user.Role)</td>
+                    <td>
+                        <button class="btn btn-danger">Eliminar</button>
+                        <button class="btn btn-primary">Editar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
